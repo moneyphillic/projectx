@@ -1,5 +1,5 @@
 # Project X
 
-$ composer install
-$ npm install
-$ npm run watch
+1. composer install
+2. npm install
+3. npm run watch

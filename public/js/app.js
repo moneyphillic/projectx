@@ -13989,11 +13989,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_router__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_MainApp_vue__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_MainApp_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_MainApp_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__store__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_MainApp_vue__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_MainApp_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_MainApp_vue__);
 __webpack_require__(14);
 
 // config
+
+
 
 
 
@@ -14005,10 +14009,18 @@ __webpack_require__(14);
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_router__["a" /* default */]);
 
+var store = new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store(__WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */]);
+var router = new __WEBPACK_IMPORTED_MODULE_2_vue_router__["a" /* default */]({
+    routes: __WEBPACK_IMPORTED_MODULE_3__routes__["a" /* routes */],
+    mode: 'history'
+});
+
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     el: '#app',
+    store: store,
+    router: router,
     components: {
-        MainApp: __WEBPACK_IMPORTED_MODULE_3__components_MainApp_vue___default.a
+        MainApp: __WEBPACK_IMPORTED_MODULE_5__components_MainApp_vue___default.a
     }
 });
 
@@ -50994,6 +51006,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'Header'
@@ -51030,8 +51059,62 @@ var staticRenderFns = [
             },
             [
               _c("div", { staticClass: "navbar-nav" }, [
-                _c("p", { staticClass: "nav-item nav-link admin-nav-item" }, [
-                  _vm._v("\n                    Project X\n                ")
+                _vm._v("\n                ProjectX\n            ")
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "navbar-collapse collapse w-100 order-3 dual-collapse2"
+            },
+            [
+              _c("ul", { staticClass: "navbar-nav ml-auto" }, [
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "nav-item nav-link admin-nav-item",
+                      attrs: { href: "javascript:;" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Login\n                    "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "nav-item nav-link admin-nav-item",
+                      attrs: { href: "javascript:;" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Sign Up\n                    "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "nav-item nav-link admin-nav-item",
+                      attrs: { href: "javascript:;" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Logout\n                    "
+                      )
+                    ]
+                  )
                 ])
               ])
             ]
@@ -51075,6 +51158,52 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routes; });
+// import components
+
+var routes = [];
+
+/***/ }),
+/* 54 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    state: {
+        defaultState: true
+    },
+    getters: {
+        defaultState: function defaultState(state) {
+            return state.defaultState;
+        }
+    },
+    mutations: {
+        defaultStateToFalse: function defaultStateToFalse(state) {
+            state.defaultState = false;
+        },
+        defaultStateToTrue: function defaultStateToTrue(state) {
+            state.defaultState = true;
+        }
+    },
+    actions: {
+        defaultStateToFalse: function defaultStateToFalse(context) {
+            context.commit('defaultStateToFalse');
+        },
+        defaultStateToTrue: function defaultStateToTrue(context) {
+            context.commit('defaultStateToTrue');
+        }
+    }
+});
 
 /***/ })
 /******/ ]);
